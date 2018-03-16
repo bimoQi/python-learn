@@ -1,0 +1,17 @@
+{% extends 'learn/base.html' %}
+
+{% block title %}首页{% endblock %}
+
+{% block content %}
+这是首页内容  string值: {{ string }}<br>
+{% for item in list %}
+  {{ item }}{% if not forloop.last %},{% endif %}
+{% endfor %}<br>
+指定name为'add'的url: {% url 'add' %}<br>
+指定name为'add2'的url: {% url 'add2' 3 4 %}<br>
+
+当前登录用户: {{ request.user }}<br>
+当前网址: {{ request.path }}<br>
+当前get参数: {{ request.GET.urlencode }}<br>
+{% endblock %}
+

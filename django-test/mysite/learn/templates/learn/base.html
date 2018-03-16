@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>{% block title %}默认主题{% endblock %} - 开始学习django</title>
+</head>
+<body>
+
+{% include 'nav.html' %}
+
+{% block content %}
+	这是默认内容...
+{% endblock %}
+
+{% include 'bottom.html' %}
+</body>
+</html>
